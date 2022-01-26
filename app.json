@@ -1,0 +1,46 @@
+{
+  "name": "@iamdivyeshh/TGVCmusicBot",
+  "description": "Telegram Bot to Play Music in Voice Chat",
+  "keywords": ["telegram", "vc", "music"],
+  "repository": "https://github.com/iamdivyeshh/TGVCmusicBot",
+  "logo": "https://telegra.ph/file/6017c19c57946e03e650f.jpg",
+  "success_url": "https://telegram.dog/zaynxop",
+  "env": {
+    "API_ID": {
+      "description": "Get API_ID from https://my.telegram.org/apps.",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get API_HASH from https://my.telegram.org/apps.",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Bot Token from @BotFather",
+      "required": true
+    },
+    "LOG_CHANNEL": {
+      "description": "LOG Channel ID (Make sure bot and VC User are added in the group)",
+      "required": true
+    },
+    "SESSION": {
+      "description": "GramJS/Telethon Session of the VC User. https://ssg.rojser.best",
+      "required": true
+    },
+    "THUMBNAIL": {
+      "description": "Direct link for default thumbnail (used if audio has no thumbnails).",
+      "required": "https://telegra.ph/file/3252842ed710915c55435.jpg"
+    },
+    "MAX_DURATION": {
+      "description": "Maximum Duration support for Streams (in seconds). Default 36000",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
